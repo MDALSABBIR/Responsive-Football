@@ -75,3 +75,32 @@ Highlights Information Style
 }
 /* Highlights Information Style End
 ************************************/
+
+/* Players Information Style */
+.informations{
+    font-size: 77%;
+    margin-left: 35px;
+
+}
+.players-details{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 27px;
+    grid-column-gap: 15px;
+    margin-top: 70px;
+    margin-bottom: 165px;
+
+}
+
+.player{
+    width: 330px;
+    height: 474px;  
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+}
+.player-image img{
+    max-width: 100%;
+}
+.player-bio h3{
+    margin: 15px 0;
+}
