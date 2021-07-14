@@ -1,106 +1,417 @@
-/******
-fonts
-******/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Poppins fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
-/***********
-font family
-************/
+/*********************** 
+Common Style
+************************/
 body{
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-/*----------------
- nav Bar Style
------------------*/
-
-
-
-/******************************
-Highlights Information Style
-*******************************/
-.container{
-     background-color: #2D25A0;
-    padding-top: 100px;
-    padding-bottom: 56px;
-    
-}
-
-.top-banner{
-    display: flex;
-    justify-content:center;
-    align-items: center;
-   
-}
-
-.title-bar{
-    max-width: 1050px;
-    margin: auto;
-}
-
-.title{
-    margin-right: 102px;
-}
-
-.title h2{
-     font-weight: bold;
-    font-size: 64px;
-    line-height: 80px;
-    width: 485px;
-    height: 230px;
+.btn {
+    background:blueviolet;
     color: #fff;
-    padding-bottom: 25px;
-}
-
-.S-button{
-    width: 168px;
-    height: 44px;
-    font-weight: 500;
+    text-decoration: none;
+    font-weight: 700;
     font-size: 16px;
-    color: #fff;
-    background: #E02C6D;
-    border-radius: 5px;
-    border: 0;
-    outline: 0;
+    line-height: 24px;
+    padding: 10px 24px;
+    display: inline-block;
+    box-shadow: inset 0 0 0 0 aquamarine;
+    transition: ease-in-out 1s;
+}
+.btn:hover{
+    box-shadow: inset 300px 0 0 0 #fff;
+    color:#000000;
     cursor: pointer;
 }
-
-.S-button:hover i{
-    transform: translate(23px) scale(1.5);
-    transition: transform 0.6s;
+h1,h2,h3{
+    margin: 0;
+}
+p{
+    margin: 0;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+/*********************** 
+   header area designs
+************************/
+.menu-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.menu-nav nav ul{
+    display: flex;
+    list-style: none;
+}
+.menu-nav nav ul li{
+    margin-right: 36px;
+}
+.menu-nav nav ul li a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: capitalize;
+    color: #fff;
+    transition: .3s;
+    padding: 10px 20px;
+}
+.menu-nav nav li:hover a{
+    background-color:blueviolet;
+ 
 }
 
+.fa-sign-in-alt{
+    margin-right: 10px;
+}
+
+/*********************** 
+   Banner area designs
+************************/
+.banner {
+    background-color: #2D25A0;
+    margin-top: -80px;
+}
+.main-banner {
+    height: 100vh;
+    display: grid;
+     grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+.banner-text {
+    margin-left: 34px;
+}
+.banner-text h1{
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 80px;
+    color: #fff;
+    margin-bottom: 20px;
+}
 .banner-image img{
-    width: 556.1px;
-    height: 438px;
+    width: 80%;
 }
-/* Highlights Information Style End
-************************************/
-
-/* Players Information Style */
-.informations{
-    font-size: 77%;
-    margin-left: 35px;
-
+.banner-image:hover img{
+    transform: rotate(10deg);
+    transition: transform 1s ease-in-out;
+    
 }
-.players-details{
+.fa-chevron-right{
+    margin-left: 10px;
+}
+
+/*********************** 
+  All players area designs
+************************/
+.all-players {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-row-gap: 27px;
-    grid-column-gap: 15px;
-    margin-top: 70px;
-    margin-bottom: 165px;
-
+    grid-gap: 30px;
+    margin: 70px 0;
+}
+.player {
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0px 0px 10px;
+}
+.player img {
+    width: 100%;
+}
+.player h2 {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 40px;
+    margin: 10px 0;
+    color: #18191F;
+}
+.player p{
+    color: #6C6C6C;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: justify;
 }
 
-.player{
-    width: 330px;
-    height: 474px;  
-    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
-    padding: 15px;
+/*********************** 
+  Highlites area designs
+************************/
+
+.highlites-area {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    grid-column-gap: 25px;
+    margin-top:110px;
 }
-.player-image img{
-    max-width: 100%;
+.highlites-text h2{
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 60px;
+    color: #0A0826;
 }
-.player-bio h3{
-    margin: 15px 0;
+.highlites-text p{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    color:#6C6C6C;
+    margin-bottom: 20px;
+}
+.hilites-images img{
+    width: 100%;
+}
+
+
+
+/*********************** 
+ Top demanding players area design
+************************/
+.top-rated-players{
+    margin: 100px 0;
+}
+.top-rated-players h2{
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 60px;
+    color: #0A0826;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.top-plyers{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap:25px;
+}
+.single-player{
+    
+    position: relative;
+}
+.single-player img{
+    width: 100%;
+    border-radius: 10px;
+}
+.player-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    white-space: nowrap;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+}
+.text-overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color:rgba(137, 43, 226, 0.592);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease; 
+}
+.single-player:hover .text-overlay{
+    height: 100%;
+}
+.player-content h3{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 40px;
+    margin: 10px 0;
+    color: #fff;
+}
+.player-content p{
+    color: #fff;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: justify;
+}
+
+
+/*********************** 
+ Top demanding players area designs
+************************/
+.trophy-win {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 10px;
+    background: aquamarine;
+    padding: 50px;
+}
+.single-trophy {
+    text-align: center;
+    border: 1px solid #fff;
+    padding: 20px 0;
+}
+.single-trophy p i {
+    color: brown;
+    font-size: 50px;
+}
+.single-trophy h3 {
+    font-size: 20px;
+    line-height: 60px;
+    color:  darkblue;
+}
+.single-trophy h2 {
+    color: black;
+    font-size: 30px;
+}
+
+/*********************** 
+ Footer area designs
+************************/
+.main-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.footer-logo {
+    text-align: center;
+}
+.footer-logo img {
+    width: 50%;
+}
+.footer-social-icon a i {
+    width: 50px;
+    height: 50px;
+    background: blueviolet;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    margin: 0 3px 20px 0;
+    transition: ease-out .3s;
+}
+.footer-social-icon a:hover i{
+    background-color: aquamarine;
+    color: #fff;
+}
+.footer-copyright{
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+    padding-bottom: 30px;
+}
+
+
+
+/**************************************
+ Responsive design area
+**************************************/
+
+/*********************** 
+ Mobile device responsive
+************************/
+
+@media only screen and (max-width:688px) {
+    
+   .container{
+       width: 100%;
+   }
+    header{
+        display: none;
+    }
+    .banner{
+        margin-top: 0;
+    }
+    .main-banner{
+        height: auto;
+        grid-template-columns: 1fr;
+    }
+    .banner-text h1{
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 50px;
+        color: #FFFFFF;
+        padding-top: 100px;
+
+    }
+    .banner-image{
+        text-align: center;
+    }
+    .banner-image img{
+        width: 60%;
+        margin-top: 50px;
+    }
+    .all-players,.highlites-area,.top-plyers{
+        grid-template-columns: 1fr;
+    }
+    .hilites-images{
+        margin-top:30px;
+    }
+    
+    .trophy-win{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap:10px;
+    }
+}
+
+/*********************** 
+ Tablet device responsive
+************************/
+
+@media only screen and (min-width:689px) and (max-width:992px){
+    .container{
+        width: 100%;
+    }
+    header{
+        display: none;
+    }
+    .banner{
+        margin-top: 0;
+    }
+    .all-players{
+        margin-left:10px;
+        margin-right:10px;
+    }
+    .banner-image img{
+        width: 100%;
+    }
+    .banner-text h1{
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 50px;
+        color: #FFFFFF;
+        
+    }
+
+    .all-players,.highlites-area,.top-plyers{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+    .highlites-text h2{
+        font-size: 35px;
+        margin-left: 10px;
+    }
+    .highlites-text p{
+        margin-left: 10px;
+    }
+    .btn{
+        margin-left: 10px;
+    }
+    .top-rated-players h2{
+        font-size: 35px;
+    }
+    .hilites-images{
+        margin-right:10px;
+    }
+    .top-plyers{
+        margin-left:10px;
+        margin-right:10px;
+    }
+    .trophy-win{
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap:10px;
+    }
+
 }
